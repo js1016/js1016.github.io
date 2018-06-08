@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>txt-reader demo</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link href="de4be3965d6d39828da1.css" rel="stylesheet"></head>
+
+<body>
+    <div id="status">
+        <div id="idle" class="hide">
+            <span id="file-info"></span>
+            <a href="#" id="try-other">Try another file</a>
+        </div>
+        <div id="loading" class="hide">
+            <div id="progress-bar"></div>
+            <div id="loading-message"></div>
+        </div>
+    </div>
+    <div id="box">
+        <input type="file" id="file-input" class="hide">
+        <div>
+            <i class="far fa-file"></i>
+            <label for="file-input">Choose a file</label> or drag it here.
+        </div>
+    </div>
+    <div id="main" class="hide">
+        <div id="commands">
+            <button id="view-first">View first 50 rows</button>
+            <button id="view-next">View next 50 rows</button>
+            <button id="view-last">View last 50 rows</button>
+            <span>Or</span>
+            <span class="code">getLines(</span>
+            <input type="number" id="start-row" placeholder="Start line number">
+            <span class="code">,</span>
+            <select id="row-size">
+                <option value="10">10</option>
+                <option value="50" selected="selected">50</option>
+                <option value="100">100</option>
+                <option value="200">200</option>
+            </select>
+            <span class="code">)</span>
+            <button id="run-button">Run</button>
+        </div>
+        <div id="main-area">
+            <div id="results"></div>
+            <div id="console" class="code"></div>
+        </div>
+        <a href="#" id="clear-console">Clear console</a>
+    </div>
+    <a href="https://github.com/js1016/txt-reader" target="_blank">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub">
+    </a>
+<script type="text/javascript" src="index_bundle.js"></script></body>
+
+</html>
